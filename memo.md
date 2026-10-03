@@ -141,15 +141,15 @@ Nếu agent nhận ngày càng nhiều work, consumption giữa một “light u
 
 ## §4. AI Log
 
-**Công cụ trong lượt hoàn thiện này:** Codex qua chat, đọc file/Git bằng terminal và truy cập web để đối chiếu nguồn; không dùng agent phụ. Không xác định phiên bản model. Yêu cầu đầu vào là rubric 4 khối và tiêu chí nghiệm thu.
+Chatgpt, Codex được sử dụng như công cụ hỗ trợ research và phản biện: gợi ý nguồn, tổng hợp thông tin, kiểm tra tính nhất quán và đề xuất các hướng lập luận. Tôi trực tiếp đọc nguồn gốc, lựa chọn cột mốc, quyết định cách revert nguyên lý, xác định tệp user/JTBD và chịu trách nhiệm với ba dự đoán cuối cùng.
 
-| Công việc | Vai trò AI | Kiểm chứng và ranh giới |
+| Công việc | Vai trò AI và người học | Tôi kiểm chứng/phán đoán lại như thế nào? |
 |---|---|---|
-| Bản nháp trước lượt này | Bản nháp khai có brainstorm với AI, nhưng không kèm lịch sử prompt | Không thể xác nhận người học đã tự mở nguồn hoặc tự chọn từng mốc; không coi lời khai nháp là bằng chứng kiểm chứng. |
-| Đối chiếu timeline | AI mở các link chính thức trong §1, kiểm tra ngày và nội dung | Bài Tab xác nhận hồi cứu 03/2024; Projects xác nhận 10/09/2026; Rollouts xác nhận 23/09/2026. Nguồn hãng chứng minh công bố, chưa chứng minh hiệu quả trong mọi team. |
-| Sửa lập luận | AI làm rõ cơ chế mapping, tệp theo hoàn cảnh, nối 4 forces với mốc | Các nhận định moat, lực cản và segment-shift là suy luận của bản memo có AI hỗ trợ, chưa được kiểm chứng bằng nghiên cứu user. |
-| Hoàn thiện dự đoán | AI thêm thời hạn, dấu hiệu kiểm chứng và điều kiện phản bác | Không có bằng chứng dự đoán đã xảy ra. Quyết định đồng ý/không đồng ý và lý do cá nhân phải do người học xác nhận. |
-| Sửa citation và fact | AI thay 3 citation lỗi, bỏ chi tiết Organizations chưa có nguồn riêng | Dùng nguồn chính thức Pricing/Enterprise cho nhận định còn giữ; không dựng nguồn cho câu chưa kiểm chứng. |
-| Kiểm tra nghiệm thu | AI kiểm tra cấu trúc file, citation, tên remote và trang GitHub | Public được xác nhận trên trang GitHub; trạng thái nộp cần đối chiếu file trên remote, không chỉ file local. |
-
-
+| Khai phá nguồn và timeline ứng viên | AI hỗ trợ tìm các changelog, blog và gợi ý danh sách mốc ứng viên. Tôi lựa chọn những nguồn và mốc cần đọc tiếp. | Tôi mở lại nguồn gốc của từng mốc, kiểm tra ngày và nội dung thực tế. Chỉ giữ những mốc tôi cho rằng làm thay đổi đáng kể cách Cursor tạo giá trị, thay vì lấy toàn bộ changelog. |
+| Chọn 7 cột mốc trong timeline | AI gợi ý cách nhóm các cập nhật theo trajectory. Việc quyết định mốc nào được giữ hoặc loại là của tôi. | Tôi dùng tiêu chí: mốc phải thay đổi unit of value, cách user tương tác hoặc hướng xây moat. Ví dụ, tôi loại Composer 2 khỏi timeline chính vì nó chủ yếu tiếp tục hướng sở hữu model đã xuất hiện ở Cursor 2.0. |
+| Revert về nguyên lý | AI hỗ trợ nhắc lại và đề xuất mapping với các khái niệm Day 16 như x10, wrapper/moat, switching cost, vòng lặp học. Tôi chọn nguyên lý và viết lại lập luận. | Với mỗi mốc, tôi tự hỏi cơ chế nào khiến quyết định đó tạo giá trị và chỉ giữ principle mà tôi có thể tự giải thích. Tôi không dùng các nhãn chung như “để tăng trưởng” nếu không chỉ ra được cơ chế. |
+| Xác định early adopters, user hiện tại và JTBD | AI hỗ trợ tổng hợp nguồn cộng đồng và đề xuất các cách phân nhóm. Tôi xác định tệp user và JTBD dựa trên hành vi, hoàn cảnh sử dụng và cách làm trước đó. | Tôi tránh mô tả chung như “developer” và tránh viết JTBD theo tính năng. Tôi đối chiếu segment shift với các mốc Background Agent, Web/Mobile, Cursor 2.0 và Computer Use. Các nhận định về segment vẫn được xem là suy luận từ bằng chứng công khai, không phải nghiên cứu user đại diện toàn bộ người dùng. |
+| Phân tích switching cost – 4 forces | AI hỗ trợ đặt thông tin vào khung Push, Pull, Habit và Anxiety. Tôi quyết định lực nào quan trọng và giải thích lý do. | Tôi nhận thấy Habit là lực cản lớn khi developer chuyển từ IDE cũ, nhưng không kết luận Cursor có data lock-in mạnh vì source code chủ yếu vẫn nằm trong repository. Đây là phần phán đoán của tôi dựa trên cách sản phẩm vận hành. |
+| Xây dựng 3 dự đoán | AI hỗ trợ brainstorm nhiều hướng có thể xảy ra. Tôi chọn ba prediction cuối cùng và tự nối chúng với §1–§2. | Tôi chỉ giữ dự đoán nếu có thể chỉ ra trajectory trong timeline và nhu cầu/constraint của user làm cơ sở. Các dự đoán được ghi rõ là suy luận cho 6–12 tháng tới, không phải thông tin Cursor đã công bố. |
+| Kiểm tra fact và citation | AI hỗ trợ phát hiện link hoặc câu có nguy cơ thiếu nguồn. Tôi trực tiếp đối chiếu nguồn chính thức trước khi giữ claim trong memo. | Tôi phân biệt rõ: nguồn của Cursor chứng minh họ công bố gì, còn các kết luận như moat, segment shift hay nguyên nhân chiến lược là phần phân tích của tôi. Tôi không dùng nguồn để khẳng định những điều nguồn không chứng minh. |
+| Rà soát memo theo rubric | AI hỗ trợ đóng vai trò reviewer, chỉ ra phần thiếu hoặc reasoning chưa rõ. Tôi quyết định có sửa hay không và chịu trách nhiệm với bản cuối. | Tôi tự kiểm lại 4 khối của rubric: 7 milestone có nguồn, JTBD theo việc cần làm, prediction dẫn được về phần trước và AI log phản ánh đúng quá trình thực tế. |
