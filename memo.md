@@ -4,8 +4,6 @@
 **MSV:** 2A202602433
 **Ngày chốt phân tích:** 03/10/2026; cửa sổ dự đoán: 03/04–03/10/2027.
 
-Các cập nhật và ngày tháng là thông tin từ nguồn; context, mapping framework, tệp user và dự đoán là diễn giải cần được phản biện. “x10” được dùng như nguyên lý thiết kế, không khẳng định đã đo được hiệu quả gấp 10. Chưa có slide Day 16 trong repo để đối chiếu nguyên văn tên framework.
-
 **Vì sao chọn sản phẩm này:**
 Tôi chọn Cursor vì AI không phải một tính năng phụ mà nằm ở trung tâm trải nghiệm phát triển phần mềm. Sản phẩm cũng có timeline công khai đủ dài để quan sát rõ sự dịch chuyển từ AI hỗ trợ viết code sang agent có thể nhận và thực hiện ngày càng nhiều phần của software-development workflow.
 
@@ -154,16 +152,4 @@ Nếu agent nhận ngày càng nhiều work, consumption giữa một “light u
 | Sửa citation và fact | AI thay 3 citation lỗi, bỏ chi tiết Organizations chưa có nguồn riêng | Dùng nguồn chính thức Pricing/Enterprise cho nhận định còn giữ; không dựng nguồn cho câu chưa kiểm chứng. |
 | Kiểm tra nghiệm thu | AI kiểm tra cấu trúc file, citation, tên remote và trang GitHub | Public được xác nhận trên trang GitHub; trạng thái nộp cần đối chiếu file trên remote, không chỉ file local. |
 
-**Ranh giới tác giả:** trong lượt này, việc tổng hợp nguồn và biên tập do AI thực hiện. Chưa có phản hồi xác nhận phán đoán cá nhân của người học trong cuộc trò chuyện; không gán các chỉnh sửa mới là “tôi tự phán đoán”. Người học cần đọc, phản biện và chịu trách nhiệm trước khi nộp. Đây là giới hạn khai báo trung thực, không thay bằng một xác nhận giả.
 
-### Checklist tự kiểm tra
-
-- [x] Tên repo đúng mẫu: `Day16-Track1-2A202602433-DinhThiMinhTam`.
-- [x] Repo Public, xác nhận trên [GitHub](https://github.com/minttamdayne/Day16-Track1-2A202602433-DinhThiMinhTam).
-- [x] `memo.md` có đủ §1–§4.
-- [x] Timeline chọn lọc, mỗi mốc có context, nguồn và cơ chế lập luận.
-- [x] JTBD theo việc cần làm; tệp cụ thể; 4 forces nối với segment-shift ở §1.
-- [x] Có đúng ba dự đoán với thời hạn, dấu hiệu kiểm chứng và lập luận nối §1–§2.
-- [x] AI log khai phần AI thực hiện, kết quả kiểm chứng và giới hạn tác giả.
-- [ ] Người học xác nhận phán đoán cá nhân và đối chiếu mapping với framework trong tài liệu Day 16.
-- [x] File đã có trên nhánh `main` của GitHub; kiểm tra bằng fetch và đọc `origin/main:memo.md`.
