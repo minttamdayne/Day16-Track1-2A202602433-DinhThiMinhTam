@@ -1,12 +1,12 @@
 # Memo Teardown — Cursor
 
-**Họ tên:** Đinh Thị Minh Tâm  
-**MSV:** 2A202602433  
+**Họ tên:** Đinh Thị Minh Tâm
+**MSV:** 2A202602433
 **Ngày chốt phân tích:** 03/10/2026; cửa sổ dự đoán: 03/04–03/10/2027.
 
 Các cập nhật và ngày tháng là thông tin từ nguồn; context, mapping framework, tệp user và dự đoán là diễn giải cần được phản biện. “x10” được dùng như nguyên lý thiết kế, không khẳng định đã đo được hiệu quả gấp 10. Chưa có slide Day 16 trong repo để đối chiếu nguyên văn tên framework.
 
-**Vì sao chọn sản phẩm này:**  
+**Vì sao chọn sản phẩm này:**
 Tôi chọn Cursor vì AI không phải một tính năng phụ mà nằm ở trung tâm trải nghiệm phát triển phần mềm. Sản phẩm cũng có timeline công khai đủ dài để quan sát rõ sự dịch chuyển từ AI hỗ trợ viết code sang agent có thể nhận và thực hiện ngày càng nhiều phần của software-development workflow.
 
 ---
@@ -61,16 +61,16 @@ Sau đó Web/Mobile làm workflow này không còn phụ thuộc vào IDE; Curso
 
 ### Switching cost — 4 forces
 
-**Push — vấn đề với cách cũ:**  
+**Push — vấn đề với cách cũ:**
 Coding workflow bị phân mảnh giữa manual coding, search, chatbot và nhiều extension. Developer vẫn phải tự tìm context, chuyển giữa nhiều tool và thực hiện phần lớn các thay đổi multi-file.
 
-**Pull — sức hút của Cursor:**  
+**Pull — sức hút của Cursor:**
 Cursor giảm khoảng cách từ intent đến working software. Giá trị tăng dần từ context-aware autocomplete sang agent có thể thực hiện cả task, chạy background, test và tạo output để review.
 
-**Habit — thói quen giữ user ở cách cũ:**  
+**Habit — thói quen giữ user ở cách cũ:**
 Developer đã quen với shortcut, extension, debugger, Git workflow và muscle memory trong VS Code hoặc JetBrains. Cursor giảm lực cản này bằng trải nghiệm rất gần VS Code thay vì bắt user học một editor hoàn toàn mới.
 
-**Anxiety — nỗi lo khi chuyển đổi:**  
+**Anxiety — nỗi lo khi chuyển đổi:**
 User có thể lo AI sửa sai code, mất kiểm soát, tạo chi phí khó dự đoán hoặc gây rủi ro bảo mật. Với enterprise, anxiety còn gồm privacy, governance và security. Vì vậy reviewable diffs, isolated environments, spend controls và administrative controls trở thành một phần quan trọng của product value.
 
 **Đối chiếu hai tệp:** ở tệp tự sửa code, push là thao tác lặp lại, pull là Tab/Fusion (§1, 03/2024–01/2025), habit là editor và anxiety là edit sai. Ở tệp phối hợp nhiều PR, push là tồn đọng migration/review, pull là Projects và Rollouts (§1, 09/2026), habit là quy trình CI/review đã duyệt, anxiety là agent chạm production và vượt ngân sách. Switching cost lúc rời Cursor là công chuyển rules/context, dựng lại môi trường agent và xin duyệt integrations; chưa có dữ liệu để định lượng.
@@ -88,10 +88,10 @@ Nhưng sau khi đã dùng Cursor, switching cost ngày càng chuyển sang **age
 ### Dự đoán 1 — Cursor sẽ tiếp tục chuyển từ “AI IDE” sang lớp orchestration cho software work
 **Loại:** mở rộng tính năng / định vị sản phẩm
 
-**Dự đoán:**  
+**Dự đoán:**
 Trong 6–12 tháng tới, Cursor nhiều khả năng sẽ mở rộng Projects theo hướng để user giao những outcome ngày càng lớn hơn cho một hệ thống nhiều agent, thay vì phải tạo và quản từng agent/task riêng lẻ.
 
-**Lập luận:**  
+**Lập luận:**
 Trajectory đã đi khá liên tục từ Tab → Background Agent → multi-agent → Computer Use → Projects. Cursor 2.0 đã chuyển UI từ file-centric sang agent-centric, còn Projects hiện được thiết kế để duy trì context qua nhiều tháng và delegate cho nhiều subagents. Cursor cũng mô tả đây là việc đưa developer lên một mức abstraction cao hơn. Vì vậy bước tiếp theo hợp lý không phải chỉ thêm một coding feature mới, mà là tăng khả năng **planning, orchestration, dependency management và verification** trên các body of work lớn hơn.
 
 Điều này cũng khớp JTBD của tệp hiện tại: engineering team không chỉ muốn “code nhanh hơn” mà muốn **ship một kết quả phần mềm nhanh hơn**.
@@ -101,10 +101,10 @@ Trajectory đã đi khá liên tục từ Tab → Background Agent → multi-age
 ### Dự đoán 2 — Cursor sẽ đầu tư mạnh hơn vào verifier, review và safety thay vì chỉ làm generator thông minh hơn
 **Loại:** mở rộng capability / moat
 
-**Dự đoán:**  
+**Dự đoán:**
 Cursor nhiều khả năng sẽ mở rộng các lớp tự động kiểm chứng như testing, security review, rollout checks, code review và artifacts để agent có thể chứng minh rằng work của nó đủ tốt trước khi human review.
 
-**Lập luận:**  
+**Lập luận:**
 Computer Use đã đóng một phần feedback loop: agent có thể chạy software mình tạo ra và cung cấp video, screenshot, log. Mốc 23/09/2026 ở §1 đã có Security Review và Rollouts. [Nguồn chính thức](https://cursor.com/blog/rollouts-and-security-reviewer). Vì vậy dự đoán ở đây là bước tích hợp và kiểm soát tiếp theo, không dự đoán lại tính năng đã ra mắt.
 
 Khi agent nhận task ngày càng lớn, bottleneck không còn chỉ là **“AI có sinh được code không?”** mà thành:
@@ -120,10 +120,10 @@ Khi agent nhận task ngày càng lớn, bottleneck không còn chỉ là **“A
 ### Dự đoán 3 — Enterprise sẽ trở thành một battleground lớn hơn, với pricing và governance ngày càng gắn với agent usage
 **Loại:** segment + mô hình kiếm tiền
 
-**Dự đoán:**  
+**Dự đoán:**
 Trong 6–12 tháng tới, Cursor nhiều khả năng tiếp tục phát triển pricing, quota và quản trị quanh mức độ sử dụng agent/model thay vì chỉ dựa vào một seat đồng nhất.
 
-**Lập luận:**  
+**Lập luận:**
 [Pricing](https://cursor.com/pricing) phân biệt mức sử dụng và có pooled usage ở Enterprise. [Trang Enterprise](https://cursor.com/enterprise) mô tả seat kèm usage và giới hạn chi phí ở cấp team/user. Đây là nền tảng đã có, không phải dự đoán Cursor bỏ seat.
 
 Điều này cho thấy buyer hiện không chỉ là developer. Cursor phải đồng thời thuyết phục:
@@ -166,4 +166,4 @@ Nếu agent nhận ngày càng nhiều work, consumption giữa một “light u
 - [x] Có đúng ba dự đoán với thời hạn, dấu hiệu kiểm chứng và lập luận nối §1–§2.
 - [x] AI log khai phần AI thực hiện, kết quả kiểm chứng và giới hạn tác giả.
 - [ ] Người học xác nhận phán đoán cá nhân và đối chiếu mapping với framework trong tài liệu Day 16.
-- [ ] File đã có trên nhánh `main` của GitHub.
+- [x] File đã có trên nhánh `main` của GitHub; kiểm tra bằng fetch và đọc `origin/main:memo.md`.
